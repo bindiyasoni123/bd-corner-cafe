@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>B&amp;D's Corner Café | Home-cooked breakfasts &amp; famous homemade chips, Blackhall Colliery</title>
+<meta name="description" content="B&D's Corner Café, Coast Road, Blackhall Colliery. Big home-cooked breakfasts, famous homemade chips, burgers, wraps and afternoon tea. Dine in, collect or order on Just Eat. Dog-friendly." />
+<meta property="og:title" content="B&D's Corner Café — Blackhall Colliery" />
+<meta property="og:type" content="restaurant" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --sage:#9DAA8B;
+    --sage-dk:#6C7B57;
+    --sage-deep:#3D4A33;
+    --char:#191B18;
+    --mint:#5FC8B7;
+    --mint-lt:#9BDDD0;
+    --terra:#C05C36;
+    --terra-dk:#9F4726;
+    --cream:#F6F1E2;
+    --cream-2:#ECE1C9;
+    --ink:#262A22;
+    --neon:#FF3D3D;
+    --neon-blue:#5AA9FF;
+    --line:rgba(38,42,34,.16);
+    --shadow:0 16px 44px rgba(38,42,34,.22);
+    --shadow-sm:0 5px 18px rgba(38,42,34,.14);
+    --ring:0 0 0 3px rgba(95,200,183,.55);
+    --maxw:1120px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  html,body{overflow-x:hidden;width:100%}
+  body{margin:0;background:var(--cream);color:var(--ink);
+    font-family:"Poppins",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    font-size:16.5px;line-height:1.62;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{margin:0;line-height:1.05}
+  a{color:inherit}
+  img{max-width:100%;display:block}
+  iframe{max-width:100%}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+  .script{font-family:"Great Vibes",cursive;font-weight:400}
+  .label{font-weight:700;text-transform:uppercase;letter-spacing:.16em;font-size:.72rem}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;font-weight:700;font-size:1rem;
+    padding:.82rem 1.4rem;border-radius:10px;border:2px solid transparent;cursor:pointer;text-decoration:none;
+    transition:transform .14s ease,box-shadow .14s ease,background .14s ease;white-space:nowrap}
+  .btn:focus-visible{outline:none;box-shadow:var(--ring)}
+  .btn-terra{background:var(--terra);color:#fff;border-color:var(--terra)}
+  .btn-terra:hover{background:var(--terra-dk);transform:translateY(-2px)}
+  .btn-mint{background:var(--mint);color:var(--char);border-color:var(--mint)}
+  .btn-mint:hover{filter:brightness(.95);transform:translateY(-2px)}
+  .btn-out{background:transparent;color:#fff;border-color:#fff}
+  .btn-out:hover{background:#fff;color:var(--ink);transform:translateY(-2px)}
+  .btn-outdark{background:#fff;color:var(--terra-dk);border-color:var(--terra)}
+  .btn-outdark:hover{background:var(--terra);color:#fff;transform:translateY(-2px)}
+
+  /* Marquee — black sign strip */
+  .marquee{background:var(--char);color:var(--mint);overflow:hidden;white-space:nowrap}
+  .marquee .track{display:inline-block;padding:8px 0;animation:scroll 24s linear infinite}
+  .marquee span{font-weight:600;text-transform:uppercase;letter-spacing:.12em;font-size:.8rem;margin:0 1.3rem}
+  .marquee span::after{content:"🐾";margin-left:2.6rem}
+  @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  /* Header — sign board */
+  header{position:sticky;top:0;z-index:60;background:var(--char);color:var(--cream);border-bottom:3px solid var(--mint)}
+  .bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;max-width:var(--maxw);margin:0 auto;padding:8px 20px}
+  .brand{display:flex;align-items:center;gap:.5rem;text-decoration:none;color:var(--cream)}
+  .brand .paw{font-size:1.1rem}
+  .brand .bt{display:flex;flex-direction:column;line-height:.9}
+  .brand .bt b{font-family:"Great Vibes",cursive;font-weight:400;color:var(--mint);font-size:1.9rem}
+  .brand .bt small{font-size:.58rem;letter-spacing:.24em;text-transform:uppercase;color:var(--cream);opacity:.85;margin-top:-2px}
+  nav.main{display:flex;align-items:center;gap:1.3rem}
+  nav.main a.navlink{text-decoration:none;font-weight:500;font-size:.98rem;color:var(--cream);padding:.2rem 0;border-bottom:2px solid transparent}
+  nav.main a.navlink:hover{border-color:var(--mint)}
+  .head-actions{display:flex;align-items:center;gap:.6rem}
+  .status-pill{display:inline-flex;align-items:center;gap:.45rem;font-size:.78rem;font-weight:700;
+    padding:.32rem .7rem;border-radius:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);color:var(--cream);white-space:nowrap}
+  .dot{width:9px;height:9px;border-radius:50%;background:#9aa}
+  .dot.open{background:#5fd39a;animation:pulse 2.2s infinite}
+  .dot.closed{background:var(--neon)}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(95,211,154,.5)}70%{box-shadow:0 0 0 8px rgba(95,211,154,0)}100%{box-shadow:0 0 0 0 rgba(95,211,154,0)}}
+  .hamburger{display:none;background:none;border:2px solid var(--cream);border-radius:8px;padding:.4rem .5rem;cursor:pointer}
+  .hamburger span{display:block;width:22px;height:2px;background:var(--cream);margin:4px 0}
+
+  /* Hero */
+  .hero{position:relative;overflow:hidden;color:#fff;
+    background:linear-gradient(180deg,rgba(25,27,24,.72),rgba(61,74,51,.78)),
+      var(--sage-deep) center/cover no-repeat;
+    background-image:linear-gradient(180deg,rgba(25,27,24,.66),rgba(61,74,51,.82)),url("images/storefront.jpg")}
+  .hero .wrap{position:relative;padding:56px 20px 64px;text-align:center;z-index:2}
+  .hero .welcome{font-family:"Great Vibes",cursive;color:var(--mint-lt);font-size:1.9rem;display:block;margin-bottom:2px}
+  .hero h1{font-family:"Great Vibes",cursive;font-weight:400;font-size:clamp(3.4rem,11vw,7rem);color:#fff;text-shadow:0 2px 18px rgba(0,0,0,.4);line-height:1}
+  .hero .tag{max-width:34ch;margin:14px auto 0;font-size:1.14rem;color:#f2eee2}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:.7rem;justify-content:center;margin-top:24px}
+
+  /* Neon OPEN sign — the eyecatcher */
+  .neon-wrap{display:flex;justify-content:center;margin:6px 0 20px}
+  .neon-sign{display:inline-flex;align-items:center;gap:.5rem;padding:.55rem 1.5rem;border-radius:14px;
+    border:3px solid var(--neon);background:rgba(20,8,8,.34);
+    box-shadow:0 0 10px var(--neon),0 0 22px rgba(255,61,61,.5),inset 0 0 14px rgba(255,61,61,.45);
+    animation:buzz 6s infinite}
+  .neon-txt{font-weight:800;font-size:1.9rem;letter-spacing:.16em;color:#fff;
+    text-shadow:0 0 4px #fff,0 0 12px var(--neon),0 0 26px var(--neon),0 0 40px var(--neon)}
+  .neon-sub{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:#ffd9d9;font-weight:600}
+  .neon-sign.closed{border-color:var(--neon-blue);box-shadow:0 0 10px var(--neon-blue),0 0 22px rgba(90,169,255,.4),inset 0 0 14px rgba(90,169,255,.35)}
+  .neon-sign.closed .neon-txt{text-shadow:0 0 4px #fff,0 0 12px var(--neon-blue),0 0 26px var(--neon-blue)}
+  .neon-sign.closed .neon-sub{color:#cfe3ff}
+  @keyframes buzz{0%,96%,100%{opacity:1}97%{opacity:.55}98%{opacity:.9}99%{opacity:.65}}
+
+  /* floating paws */
+  .paws{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden}
+  .paws b{position:absolute;font-size:1.5rem;opacity:.16;animation:floatp linear infinite}
+  .paws b:nth-child(1){left:8%;bottom:-10%;animation-duration:15s}
+  .paws b:nth-child(2){left:26%;bottom:-10%;font-size:1.1rem;animation-duration:19s;animation-delay:3s}
+  .paws b:nth-child(3){left:62%;bottom:-10%;font-size:1.8rem;animation-duration:17s;animation-delay:1.5s}
+  .paws b:nth-child(4){left:82%;bottom:-10%;animation-duration:21s;animation-delay:5s}
+  @keyframes floatp{from{transform:translateY(0) rotate(0)}to{transform:translateY(-120vh) rotate(40deg)}}
+
+  /* roof-tile scallop */
+  .scallop{height:16px;background:radial-gradient(circle at 12px -4px,var(--terra) 12px,transparent 13px) repeat-x;background-size:24px 16px}
+
+  /* Famous rail */
+  .famous{background:var(--sage);padding:32px 0}
+  .rail{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px;-webkit-overflow-scrolling:touch}
+  .rail::-webkit-scrollbar{height:8px}.rail::-webkit-scrollbar-thumb{background:rgba(255,255,255,.4);border-radius:8px}
+  .fcard{scroll-snap-align:start;flex:0 0 210px;background:var(--cream);border-radius:14px;padding:18px;box-shadow:var(--shadow-sm)}
+  .fcard .ico{font-size:1.7rem}
+  .fcard b{display:block;font-weight:700;font-size:1.02rem;margin:.4rem 0 .2rem;color:var(--terra-dk)}
+  .fcard p{margin:0;font-size:.9rem;color:#5b6350}
+
+  section{padding:62px 0}
+  section[id]{scroll-margin-top:68px}
+  .eyebrow{display:inline-block;background:var(--mint);color:var(--char);padding:.3rem .7rem;border-radius:8px}
+  .sec-title{font-weight:800;font-size:clamp(1.9rem,5vw,2.9rem);margin:.5rem 0 .3rem;color:var(--sage-deep)}
+  .sec-title .script{font-family:"Great Vibes",cursive;font-weight:400;color:var(--terra);font-size:1.25em}
+  .sec-sub{margin:0;color:#5b6350;font-size:1.05rem}
+
+  /* About */
+  .about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+  .about p{margin:0 0 1rem;font-size:1.06rem}
+  .about-photo{border-radius:16px;overflow:hidden;box-shadow:var(--shadow);border:4px solid #fff}
+  .about-photo img{width:100%;height:100%;object-fit:cover;display:block}
+  .about-photo .ph{aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;font-size:2.4rem;background:var(--sage)}
+
+  /* Menu */
+  .menu{background:var(--sage-deep);color:var(--cream)}
+  .menu .eyebrow{background:var(--mint);color:var(--char)}
+  .menu .sec-title{color:#fff}
+  .menu .sec-sub{color:#d6ddca}
+  .catnav{position:sticky;top:57px;z-index:20;display:flex;gap:.5rem;overflow-x:auto;padding:12px 0;margin:16px 0 8px;background:var(--sage-deep);-webkit-overflow-scrolling:touch}
+  .catnav::-webkit-scrollbar{display:none}
+  .catnav a{flex:0 0 auto;text-decoration:none;font-weight:600;font-size:.9rem;color:var(--cream);
+    border:2px solid rgba(246,241,226,.35);border-radius:999px;padding:.4rem .9rem;white-space:nowrap}
+  .catnav a.active,.catnav a:hover{background:var(--mint);border-color:var(--mint);color:var(--char)}
+  .board{background:var(--cream);color:var(--ink);border-radius:18px;box-shadow:var(--shadow);padding:8px 26px 26px;border:5px solid var(--mint)}
+  .cat{scroll-margin-top:128px;padding-top:24px}
+  .cat h3{font-weight:800;font-size:1.4rem;color:var(--terra-dk);border-bottom:3px solid var(--sage);padding-bottom:8px;margin-bottom:6px}
+  .cat .cols{columns:2;column-gap:40px}
+  .m-item{break-inside:avoid;padding:13px 0;border-bottom:1px dotted var(--line)}
+  .m-top{display:flex;align-items:baseline;gap:.5rem}
+  .m-name{font-weight:600;font-size:1.02rem}
+  .m-lead{flex:1;border-bottom:2px dotted var(--line);transform:translateY(-4px);min-width:12px}
+  .m-price{font-weight:800;color:var(--terra-dk);font-size:1rem}
+  .m-desc{color:#5b6350;font-size:.92rem;margin-top:.2rem}
+  .tag{display:inline-block;font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;background:var(--sage);color:#2b3320;border-radius:5px;padding:.05rem .4rem;margin-left:.35rem;vertical-align:middle}
+
+  /* Order strip */
+  .order-strip{background:var(--terra)}
+  .order-strip .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px;padding:34px 20px;color:#fff}
+  .order-strip h2{font-weight:800;font-size:clamp(1.5rem,4.5vw,2.3rem);max-width:22ch}
+
+  /* Gallery mosaic */
+  .mosaic{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:150px;gap:12px}
+  .tile{position:relative;border-radius:14px;overflow:hidden;cursor:pointer;background:var(--sage);border:3px solid #fff;box-shadow:var(--shadow-sm)}
+  .tile.big{grid-column:span 2;grid-row:span 2}
+  .tile.wide{grid-column:span 2}
+  .tile img{width:100%;height:100%;object-fit:cover}
+  .tile .ph{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:2.6rem;background:linear-gradient(135deg,var(--sage),var(--cream-2))}
+  .tile:nth-child(3n) .ph{background:linear-gradient(135deg,#e5b79a,var(--terra))}
+  .tile:nth-child(3n+1) .ph{background:linear-gradient(135deg,var(--mint-lt),var(--sage))}
+  .tile .cap{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(0deg,rgba(25,27,24,.85),transparent);color:#fff;font-weight:600;padding:22px 12px 8px;font-size:.86rem}
+  .g-hint{margin-top:16px;text-align:center;color:#5b6350;font-size:.9rem}
+
+  /* Lightbox */
+  .lightbox{position:fixed;inset:0;z-index:120;background:rgba(20,22,18,.92);display:none;align-items:center;justify-content:center;padding:24px;cursor:zoom-out}
+  .lightbox.show{display:flex}
+  .lightbox img{max-width:92vw;max-height:88vh;border-radius:10px;border:6px solid #fff;box-shadow:0 24px 70px rgba(0,0,0,.55)}
+  .lb-close{position:absolute;top:16px;right:22px;font-size:2.4rem;color:#fff;background:none;border:0;cursor:pointer;line-height:1}
+
+  /* Reviews */
+  .reviews{background:var(--cream-2)}
+  .r-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .postcard{background:var(--cream);border:2px solid var(--sage);border-radius:14px;padding:22px;position:relative;box-shadow:var(--shadow-sm)}
+  .postcard::after{content:"🐾";position:absolute;top:14px;right:16px;font-size:1.2rem;opacity:.55}
+  .stars{color:var(--terra);letter-spacing:.14em;margin-bottom:.5rem}
+  .postcard p{margin:0 0 1rem;font-size:1rem}
+  .postcard .who{font-weight:700;font-size:.9rem;color:var(--sage-dk)}
+
+  /* Visit */
+  .visit-top{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;margin-bottom:32px}
+  .hours-plaque{background:var(--char);color:var(--cream);border-radius:16px;overflow:hidden;border:3px solid var(--mint)}
+  .hours-plaque h3{background:var(--mint);color:var(--char);font-weight:800;padding:14px 22px;font-size:1.1rem}
+  .hrow{display:flex;justify-content:space-between;padding:11px 22px;border-bottom:1px dashed rgba(246,241,226,.18);font-size:1rem}
+  .hrow:last-child{border-bottom:0}
+  .hrow.today{background:rgba(95,200,183,.14);font-weight:700}
+  .hrow.today .day::after{content:" • today";color:var(--mint)}
+  .contact-list{margin:0;padding:0;list-style:none}
+  .contact-list li{display:flex;gap:.8rem;padding:.5rem 0;font-size:1rem;align-items:flex-start}
+  .contact-list .ico{font-size:1.2rem}
+  .contact-list a{font-weight:700;color:var(--terra-dk);text-decoration:none}
+  .contact-list a:hover{text-decoration:underline}
+  .svc{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:14px}
+  .svc span{background:var(--sage-dk);color:#fff;border-radius:999px;padding:.35rem .8rem;font-size:.82rem;font-weight:600}
+  .map{border-radius:16px;overflow:hidden;border:3px solid var(--sage);min-height:320px;margin-top:8px}
+  .map iframe{width:100%;height:100%;min-height:320px;border:0;display:block}
+
+  /* Footer */
+  footer{background:var(--sage-deep);color:#eef1e6}
+  footer .wrap{padding:46px 20px 26px}
+  .f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px}
+  footer h4{font-weight:700;color:var(--mint);font-size:1rem;margin:0 0 12px}
+  footer p{color:#d3d9c8;margin:.35rem 0}
+  footer .fbrand{font-family:"Great Vibes",cursive;font-size:2rem;color:var(--mint)}
+  footer a{color:#eef1e6;text-decoration:none;display:block;padding:.25rem 0}
+  footer a:hover{color:var(--mint)}
+  .f-social{display:inline-flex;align-items:center;gap:.5rem;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);border-radius:8px;padding:.5rem 1rem;margin-top:8px;text-decoration:none}
+  .f-bottom{border-top:1px solid rgba(255,255,255,.16);margin-top:30px;padding-top:18px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.85rem;color:#aeb8a0}
+
+  /* Mobile order bar */
+  .mobar{position:fixed;left:0;right:0;bottom:0;z-index:70;display:none;gap:8px;padding:9px 12px;background:var(--char);border-top:3px solid var(--mint)}
+  .mobar a{flex:1;display:flex;align-items:center;justify-content:center;gap:.35rem;font-weight:700;font-size:.86rem;padding:.7rem .4rem;border-radius:8px;text-decoration:none}
+  .mobar .c{background:rgba(255,255,255,.14);color:var(--cream)}
+  .mobar .j{background:var(--terra);color:#fff}
+  .mobar .d{background:rgba(255,255,255,.14);color:var(--cream)}
+
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  @media (max-width:900px){
+    nav.main{position:fixed;inset:53px 0 auto 0;background:var(--char);flex-direction:column;gap:0;padding:6px 0;border-bottom:3px solid var(--mint);transform:translateY(-190%);transition:transform .25s ease;box-shadow:var(--shadow)}
+    nav.main.show{transform:none}
+    nav.main a.navlink{padding:.85rem 20px;width:100%;border-bottom:1px solid rgba(246,241,226,.12)}
+    .hamburger{display:block}
+    .head-actions .btn,.head-actions .status-pill{display:none}
+    section{padding:44px 0}
+    .about-grid,.visit-top{grid-template-columns:1fr;gap:24px}
+    .r-grid{grid-template-columns:1fr}
+    .cat .cols{columns:1}
+    .mosaic{grid-template-columns:repeat(2,1fr);grid-auto-rows:130px}
+    .tile.big{grid-column:span 2;grid-row:span 1}
+    .tile.wide{grid-column:span 2}
+    .catnav{top:53px}
+    .mobar{display:flex}
+    body{padding-bottom:62px}
+  }
+  @media (max-width:520px){
+    .f-grid{grid-template-columns:1fr}
+    .hero-cta .btn{width:100%}
+    .order-strip .btn{width:100%}
+    .mosaic{grid-template-columns:1fr;grid-auto-rows:190px}
+    .tile.big,.tile.wide{grid-column:span 1}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{animation:none !important}
+    html{scroll-behavior:auto}
+    .reveal{opacity:1;transform:none;transition:none}
+    .paws{display:none}
+  }
+</style>
+</head>
+<body>
+
+<div class="marquee" aria-hidden="true">
+  <div class="track">
+    <span>Famous homemade chips</span><span>Big home-cooked breakfasts</span><span>Dogs welcome</span><span>Order on Just Eat</span><span>Coast Road, Blackhall</span>
+    <span>Famous homemade chips</span><span>Big home-cooked breakfasts</span><span>Dogs welcome</span><span>Order on Just Eat</span><span>Coast Road, Blackhall</span>
+  </div>
+</div>
+
+<header>
+  <div class="bar">
+    <a class="brand" href="#top" aria-label="B&D's Corner Café home">
+      <span class="paw">🐾</span>
+      <span class="bt"><b class="script">B &amp; D's</b><small>Corner Café · Blackhall</small></span>
+    </a>
+    <nav class="main" id="nav">
+      <a class="navlink" href="#menu">Menu</a>
+      <a class="navlink" href="#about">About</a>
+      <a class="navlink" href="#gallery">Gallery</a>
+      <a class="navlink" href="#visit">Find us</a>
+    </nav>
+    <div class="head-actions">
+      <span class="status-pill" id="statusPill"><span class="dot" id="statusDot"></span><span id="statusText">Checking…</span></span>
+      <a class="btn btn-terra" href="https://www.just-eat.co.uk/restaurants-bandds-corner-cafe-county-durham/menu" target="_blank" rel="noopener">Order</a>
+      <button class="hamburger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="paws" aria-hidden="true"><b>🐾</b><b>🐾</b><b>🐾</b><b>🐾</b></div>
+    <div class="wrap">
+      <span class="welcome">Welcome to</span>
+      <h1>B &amp; D's Corner Café</h1>
+      <div class="neon-wrap">
+        <div class="neon-sign" id="neonSign">
+          <span class="neon-txt" id="neonTxt">OPEN</span>
+          <span class="neon-sub" id="neonSub">Come on in</span>
+        </div>
+      </div>
+      <p class="tag">Big home-cooked breakfasts &amp; famous homemade chips on Coast Road, Blackhall Colliery. Dogs always welcome.</p>
+      <div class="hero-cta">
+        <a class="btn btn-mint" href="#menu">See the menu</a>
+        <a class="btn btn-terra" href="https://www.just-eat.co.uk/restaurants-bandds-corner-cafe-county-durham/menu" target="_blank" rel="noopener">🛵 Order on Just Eat</a>
+        <a class="btn btn-out" href="tel:+447716742855">📞 07716 742855</a>
+      </div>
+    </div>
+  </section>
+  <div class="scallop" aria-hidden="true"></div>
+
+  <!-- FAMOUS RAIL -->
+  <div class="famous">
+    <div class="wrap">
+      <div class="rail">
+        <div class="fcard"><div class="ico">🍟</div><b>Homemade chips</b><p>The ones people come back for.</p></div>
+        <div class="fcard"><div class="ico">🍳</div><b>Big breakfasts</b><p>From a Small to the Belly Buster.</p></div>
+        <div class="fcard"><div class="ico">🐾</div><b>Dog-friendly</b><p>A comfy corner for four-legged pals.</p></div>
+        <div class="fcard"><div class="ico">🛵</div><b>Delivery</b><p>Collection &amp; delivery on Just Eat.</p></div>
+        <div class="fcard"><div class="ico">🍰</div><b>Afternoon tea</b><p>A proper treat for two.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="wrap">
+      <div class="about-grid">
+        <div class="reveal">
+          <span class="eyebrow label">Our corner</span>
+          <h2 class="sec-title">A proper <span class="script">corner caff</span></h2>
+          <p>B&amp;D's Corner Café is a friendly, family-run spot on Coast Road in Blackhall Colliery — generous breakfasts, homemade chips, and always a warm welcome (and a bowl of water for the dog).</p>
+          <p>Everything's cooked fresh: full breakfasts from a Small right up to the mighty Belly Buster, burgers and crispy chicken wraps with those famous homemade chips, cold sandwiches, kids' meals, sweet treats and afternoon tea for two. Dine in, grab a takeaway, or order on Just Eat and we'll bring it to your door.</p>
+        </div>
+        <div class="about-photo reveal">
+          <img src="images/street.jpg" alt="B&D's Corner Café on Coast Road, Blackhall Colliery" loading="lazy" onerror="this.parentNode.innerHTML='<div class=&quot;ph&quot;>🏠</div>'">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section class="menu" id="menu">
+    <div class="wrap">
+      <span class="eyebrow label">What's cooking</span>
+      <h2 class="sec-title">The <span class="script" style="color:var(--mint)">menu</span></h2>
+      <p class="sec-sub">One board, all day. Dine in, collect, or order on Just Eat.</p>
+
+      <nav class="catnav" id="catnav" aria-label="Menu categories">
+        <a href="#c-break" class="active">Breakfasts</a>
+        <a href="#c-lunch">Lunch</a>
+        <a href="#c-sand">Sandwiches</a>
+        <a href="#c-kids">Kids</a>
+        <a href="#c-sweet">Sweets</a>
+        <a href="#c-drink">Drinks</a>
+        <a href="#c-tea">Afternoon Tea</a>
+      </nav>
+
+      <div class="board">
+        <!-- BREAKFASTS: REAL items & prices from Just Eat -->
+        <div class="cat" id="c-break">
+          <h3>Breakfasts</h3>
+          <div class="cols">
+            <div class="m-item"><div class="m-top"><span class="m-name">Small Breakfast</span><span class="m-lead"></span><span class="m-price">£4.95</span></div><div class="m-desc">1 sausage, 1 egg, 1 bacon, 1 hash brown, mushrooms, beans, tomato, black pudding, toast or fried bread.</div></div>
+            <div class="m-item"><div class="m-top"><span class="m-name">Large Breakfast</span><span class="m-lead"></span><span class="m-price">£7.95</span></div><div class="m-desc">2 sausage, 2 egg, 2 bacon, 2 hash browns, mushrooms, beans, tomato, black pudding, 2 toast or fried bread.</div></div>
+            <div class="m-item"><div class="m-top"><span class="m-name">Belly Buster Breakfast</span><span class="m-lead"></span><span class="m-price">£9.95</span></div><div class="m-desc">3 sausage, 3 egg, 3 bacon, 3 hash browns, mushrooms, beans, tomato, black pudding, 3 toast or fried bread.</div></div>
+            <div class="m-item"><div class="m-top"><span class="m-name">Breakfast Wrap</span><span class="m-lead"></span><span class="m-price">£5.95</span></div><div class="m-desc">Tortilla wrap with bacon, egg, sausage, beans &amp; cheese.</div></div>
+            <div class="m-item"><div class="m-top"><span class="m-name">Bun (choose 3)</span><span class="m-lead"></span><span class="m-price">from £3.50</span></div><div class="m-desc">Bacon, sausage &amp; egg in a soft bun.</div></div>
+            <div class="m-item"><div class="m-top"><span class="m-name">Omelette</span><span class="m-lead"></span><span class="m-price">£4.50</span></div><div class="m-desc">Fluffy omelette with ham.</div></div>
+            <div class="m-item"><div class="m-top"><span class="m-name">Scrambled Egg &amp; Toast</span><span class="m-lead"></span><span class="m-price">£4.50</span></div><div class="m-desc">Creamy scrambled egg on toast.</div></div>
+            <div class="m-item"><div class="m-top"><span class="m-name">Egg on Toast <span class="tag">V</span></span><span class="m-lead"></span><span class="m-price">£3.50</span></div><div class="m-desc">Your eggs, your way, on toast.</div></div>
+            <div class="m-item"><div class="m-top"><span class="m-name">Beans on Toast <span class="tag">V</span></span><span class="m-lead"></span><span class="m-price">£3.50</span></div><div class="m-desc">A classic done right.</div></div>
+            <div class="m-item"><div class="m-top"><span class="m-name">Eggy Bread</span><span class="m-lead"></span><span class="m-price">£3.50</span></div><div class="m-desc">Golden fried eggy bread.</div></div>
+            <div class="m-item"><div class="m-top"><span class="m-name">Pancakes</span><span class="m-lead"></span><span class="m-price">£2.00</span></div><div class="m-desc">Warm pancakes — add your topping.</div></div>
+          </div>
+        </div>
+        <!-- LUNCH: SAMPLE — confirm real items/prices -->
+        <div class="cat" id="c-lunch">
+          <h3>Lunch</h3>
+          <div class="cols">
+            <div class="m-item"><div class="m-top"><span class="m-name">Burger &amp; Homemade Chips</span><span class="m-lead"></span><span class="m-price">£8.50</span></div><div class="m-desc">Our famous homemade chips with a proper burger.</div></div>
+            <div class="m-item"><div class="m-top"><span class="m-name">Crispy Chicken Wrap</span><span class="m-lead"></span><span class="m-price">£7.50</span></div><div class="m-desc">Crispy chicken, salad &amp; homemade chips.</div></div>
+            <div class="m-item"><div class="m-top"><span class="m-name">Jacket Potato</span><span class="m-lead"></span><span class="m-price">£5.50</span></div><div class="m-desc">With salad and a filling of your choice.</div></div>
+            <div class="m-item"><div class="m-top"><span class="m-name">Homemade Soup</span><span class="m-lead"></span><span class="m-price">£4.50</span></div><div class="m-desc">Made fresh daily with a crusty roll.</div></div>
+            <div class="m-item"><div class="m-top"><span class="m-name">Chip Butty</span><span class="m-lead"></span><span class="m-price">£3.50</span></div><div class="m-desc">Homemade chips in a buttered bun.</div></div>
+            <div class="m-item"><div class="m-top"><span class="m-name">Panini</span><span class="m-lead"></span><span class="m-price">£5.50</span></div><div class="m-desc">Toasted, with salad and chips.</div></div>
+          </div>
+        </div>
+        <!-- SANDWICHES: SAMPLE -->
+        <div class="cat" id="c-sand">
+          <h3>Sandwiches</h3>
+          <div class="cols">
+            <div class="m-item"><div class="m-top"><span class="m-name">Bacon Sandwich</span><span class="m-lead"></span><span class="m-price">£3.50</span></div><div class="m-desc">On white or wholemeal.</div></div>
+            <div class="m-item"><div class="m-top"><span class="m-name">Cheese &amp; Onion <span class="tag">V</span></span><span class="m-lead"></span><span class="m-price">£3.20</span></div><div class="m-desc">Simple and satisfying.</div></div>
+            <div class="m-item"><div class="m-top"><span class="m-name">Tuna Mayo</span><span class="m-lead"></span><span class="m-price">£3.50</span></div><div class="m-desc">With a salad garnish.</div></div>
+            <div class="m-item"><div class="m-top"><span class="m-name">Ham Salad</span><span class="m-lead"></span><span class="m-price">£3.80</span></div><div class="m-desc">Freshly made to order.</div></div>
+          </div>
+        </div>
+        <!-- KIDS: SAMPLE -->
+        <div class="cat" id="c-kids">
+          <h3>Kids</h3>
+          <div class="cols">
+            <div class="m-item"><div class="m-top"><span class="m-name">Kids' Breakfast</span><span class="m-lead"></span><span class="m-price">£3.95</span></div><div class="m-desc">Little portion of the good stuff.</div></div>
+            <div class="m-item"><div class="m-top"><span class="m-name">Sausage &amp; Chips</span><span class="m-lead"></span><span class="m-price">£3.95</span></div><div class="m-desc">With beans or peas.</div></div>
+            <div class="m-item"><div class="m-top"><span class="m-name">Chicken Nuggets &amp; Chips</span><span class="m-lead"></span><span class="m-price">£3.95</span></div><div class="m-desc">A kids' favourite.</div></div>
+            <div class="m-item"><div class="m-top"><span class="m-name">Beans on Toast <span class="tag">V</span></span><span class="m-lead"></span><span class="m-price">£2.95</span></div><div class="m-desc">Simple and tasty.</div></div>
+          </div>
+        </div>
+        <!-- SWEETS: SAMPLE -->
+        <div class="cat" id="c-sweet">
+          <h3>Sweets</h3>
+          <div class="cols">
+            <div class="m-item"><div class="m-top"><span class="m-name">Homemade Cake</span><span class="m-lead"></span><span class="m-price">£3.20</span></div><div class="m-desc">Ask what's fresh on the counter today.</div></div>
+            <div class="m-item"><div class="m-top"><span class="m-name">Apple Pie &amp; Custard</span><span class="m-lead"></span><span class="m-price">£3.50</span></div><div class="m-desc">Warm and comforting.</div></div>
+            <div class="m-item"><div class="m-top"><span class="m-name">Ice Cream Sundae</span><span class="m-lead"></span><span class="m-price">£3.50</span></div><div class="m-desc">A treat for big kids and little.</div></div>
+            <div class="m-item"><div class="m-top"><span class="m-name">Scone, Jam &amp; Cream</span><span class="m-lead"></span><span class="m-price">£3.00</span></div><div class="m-desc">Best with a pot of tea.</div></div>
+          </div>
+        </div>
+        <!-- DRINKS: SAMPLE -->
+        <div class="cat" id="c-drink">
+          <h3>Drinks</h3>
+          <div class="cols">
+            <div class="m-item"><div class="m-top"><span class="m-name">Tea (pot)</span><span class="m-lead"></span><span class="m-price">£1.80</span></div><div class="m-desc">A proper brew.</div></div>
+            <div class="m-item"><div class="m-top"><span class="m-name">Coffee</span><span class="m-lead"></span><span class="m-price">£2.20</span></div><div class="m-desc">Latte, cappuccino, americano.</div></div>
+            <div class="m-item"><div class="m-top"><span class="m-name">Hot Chocolate</span><span class="m-lead"></span><span class="m-price">£2.60</span></div><div class="m-desc">With cream &amp; marshmallows.</div></div>
+            <div class="m-item"><div class="m-top"><span class="m-name">Cans &amp; Cold Drinks</span><span class="m-lead"></span><span class="m-price">£1.40</span></div><div class="m-desc">A range of soft drinks.</div></div>
+          </div>
+        </div>
+        <!-- AFTERNOON TEA: real category, SAMPLE price -->
+        <div class="cat" id="c-tea">
+          <h3>Afternoon Tea</h3>
+          <div class="cols">
+            <div class="m-item"><div class="m-top"><span class="m-name">Afternoon Tea for Two</span><span class="m-lead"></span><span class="m-price">£14.95</span></div><div class="m-desc">Sandwiches, warm scones with jam &amp; cream, homemade cakes and a pot of tea for two.</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ORDER STRIP -->
+  <div class="order-strip">
+    <div class="wrap">
+      <h2>Fancy it brought to your door?</h2>
+      <a class="btn btn-outdark" href="https://www.just-eat.co.uk/restaurants-bandds-corner-cafe-county-durham/menu" target="_blank" rel="noopener">🛵 Order on Just Eat</a>
+    </div>
+  </div>
+
+  <!-- GALLERY -->
+  <section id="gallery">
+    <div class="wrap">
+      <span class="eyebrow label">A little taste</span>
+      <h2 class="sec-title">Fresh from our <span class="script">kitchen</span></h2>
+      <p class="sec-sub">Real, home-cooked food — made fresh every day.</p>
+      <!-- Swap food emoji tiles for real photos: images/photo-02.jpg … photo-06.jpg -->
+      <div class="mosaic reveal" style="margin-top:24px">
+        <figure class="tile big"><img src="images/storefront.jpg" alt="B&D's Corner Café shopfront" loading="lazy" data-emoji="🏠"><figcaption class="cap">Our corner on Coast Road</figcaption></figure>
+        <figure class="tile"><img src="images/photo-02.jpg" alt="Homemade chips" loading="lazy" data-emoji="🍟"><figcaption class="cap">Homemade chips</figcaption></figure>
+        <figure class="tile"><img src="images/photo-03.jpg" alt="Big breakfast" loading="lazy" data-emoji="🍳"><figcaption class="cap">Big breakfasts</figcaption></figure>
+        <figure class="tile wide"><img src="images/photo-04.jpg" alt="Burger and chips" loading="lazy" data-emoji="🍔"><figcaption class="cap">Burgers &amp; lunches</figcaption></figure>
+        <figure class="tile"><img src="images/photo-05.jpg" alt="Homemade cake" loading="lazy" data-emoji="🍰"><figcaption class="cap">Sweet treats</figcaption></figure>
+        <figure class="tile"><img src="images/photo-06.jpg" alt="Dog-friendly" loading="lazy" data-emoji="🐾"><figcaption class="cap">Dogs welcome</figcaption></figure>
+      </div>
+      <p class="g-hint">Tap any photo to view it full-size.</p>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="reviews">
+    <div class="wrap">
+      <span class="eyebrow label">Kind words</span>
+      <h2 class="sec-title">Loved by <span class="script">locals</span></h2>
+      <p class="sec-sub">A little gem on Coast Road — here's what people say.</p>
+      <div class="r-grid" style="margin-top:24px">
+        <div class="postcard reveal"><div class="stars">★★★★★</div><p>The large full English was beautiful and brilliant value. Spotlessly clean, with lovely friendly staff.</p><div class="who">— Visitor review</div></div>
+        <div class="postcard reveal"><div class="stars">★★★★★</div><p>Best homemade chips I've had in years. The burger was cracking too — we left with very full tummies.</p><div class="who">— Local diner</div></div>
+        <div class="postcard reveal"><div class="stars">★★★★★</div><p>A proper little gem. Wholesome food, a dog-friendly corner, and staff who couldn't be more helpful.</p><div class="who">— Regular</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VISIT -->
+  <section id="visit">
+    <div class="wrap">
+      <span class="eyebrow label">Come and see us</span>
+      <h2 class="sec-title">Find <span class="script">B&amp;D's</span></h2>
+      <p class="sec-sub" style="margin-bottom:28px">On Coast Road, Blackhall Colliery — free to park and easy to find.</p>
+      <div class="visit-top">
+        <div class="reveal">
+          <!-- PLACEHOLDER HOURS — confirm real opening times with the owner -->
+          <div class="hours-plaque">
+            <h3>Opening hours</h3>
+            <div class="hrow" data-day="1"><span class="day">Monday</span><span>8:00am – 3:00pm</span></div>
+            <div class="hrow" data-day="2"><span class="day">Tuesday</span><span>8:00am – 3:00pm</span></div>
+            <div class="hrow" data-day="3"><span class="day">Wednesday</span><span>8:00am – 3:00pm</span></div>
+            <div class="hrow" data-day="4"><span class="day">Thursday</span><span>8:00am – 3:00pm</span></div>
+            <div class="hrow" data-day="5"><span class="day">Friday</span><span>8:00am – 3:00pm</span></div>
+            <div class="hrow" data-day="6"><span class="day">Saturday</span><span>8:00am – 3:00pm</span></div>
+            <div class="hrow" data-day="0"><span class="day">Sunday</span><span>9:00am – 2:00pm</span></div>
+          </div>
+        </div>
+        <div class="reveal">
+          <ul class="contact-list">
+            <li><span class="ico">📍</span><span>Coast Road, Blackhall Colliery, Hartlepool TS27 4AN</span></li>
+            <li><span class="ico">📞</span><a href="tel:+447716742855">07716 742855</a> &nbsp;·&nbsp; <a href="tel:+441917118180">0191 711 8180</a></li>
+            <li><span class="ico">🛵</span><a href="https://www.just-eat.co.uk/restaurants-bandds-corner-cafe-county-durham/menu" target="_blank" rel="noopener">Order on Just Eat</a></li>
+            <li><span class="ico">👍</span><a href="https://www.facebook.com/p/B-DS-Corner-Cafe-100087888995112/" target="_blank" rel="noopener">Message us on Facebook</a></li>
+          </ul>
+          <div class="svc"><span>Dine in</span><span>Collection</span><span>Delivery</span><span>Dog-friendly</span></div>
+        </div>
+      </div>
+      <div class="map reveal">
+        <iframe title="Map to B&D's Corner Café" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://maps.google.com/maps?q=B%26D%27s%20Corner%20Cafe%2C%20Coast%20Road%2C%20Blackhall%20Colliery%2C%20Hartlepool%20TS27%204AN&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="lb-close" id="lbClose" aria-label="Close photo">&times;</button>
+  <img id="lbImg" src="" alt="" />
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <span class="fbrand">B &amp; D's Corner Café</span>
+        <p>Home-cooked breakfasts and famous homemade chips on Coast Road, Blackhall Colliery. Dogs welcome, everyone welcome.</p>
+        <a class="f-social" href="https://www.facebook.com/p/B-DS-Corner-Cafe-100087888995112/" target="_blank" rel="noopener">👍 Follow on Facebook</a>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <p>Coast Road<br>Blackhall Colliery<br>Hartlepool TS27 4AN</p>
+        <a href="tel:+447716742855">📞 07716 742855</a>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a href="#menu">Menu</a>
+        <a href="https://www.just-eat.co.uk/restaurants-bandds-corner-cafe-county-durham/menu" target="_blank" rel="noopener">Order on Just Eat</a>
+        <a href="#visit">Opening hours</a>
+        <a href="#about">About us</a>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <span>&copy; <span id="yr"></span> B&amp;D's Corner Café, Blackhall Colliery.</span>
+      <span>Website by <b>Bindiya Siddhapura</b></span>
+    </div>
+  </div>
+</footer>
+
+<div class="mobar">
+  <a class="c" href="tel:+447716742855">📞 Call</a>
+  <a class="j" href="https://www.just-eat.co.uk/restaurants-bandds-corner-cafe-county-durham/menu" target="_blank" rel="noopener">🛵 Order</a>
+  <a class="d" href="https://www.google.com/maps/dir/?api=1&destination=B%26D%27s%20Corner%20Cafe%2C%20Coast%20Road%2C%20Blackhall%20Colliery%2C%20TS27%204AN" target="_blank" rel="noopener">📍 Directions</a>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var HOURS={0:[9*60,14*60],1:[8*60,15*60],2:[8*60,15*60],3:[8*60,15*60],4:[8*60,15*60],5:[8*60,15*60],6:[8*60,15*60]};
+  function fmt(min){var h=Math.floor(min/60),m=min%60,ap=h>=12?"pm":"am",h12=h%12||12;return h12+(m?":"+String(m).padStart(2,"0"):"")+ap;}
+  function update(){
+    var now=new Date(),day=now.getDay(),mins=now.getHours()*60+now.getMinutes(),rng=HOURS[day];
+    var open=rng&&mins>=rng[0]&&mins<rng[1];
+    var dot=document.getElementById("statusDot"),txt=document.getElementById("statusText");
+    var sign=document.getElementById("neonSign"),ntxt=document.getElementById("neonTxt"),nsub=document.getElementById("neonSub");
+    if(open){dot.className="dot open";txt.textContent="Open now";sign.className="neon-sign";ntxt.textContent="OPEN";nsub.textContent="Come on in";}
+    else{
+      dot.className="dot closed";sign.className="neon-sign closed";ntxt.textContent="CLOSED";
+      var days=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],set=false,msg="See you soon";
+      for(var i=0;i<7&&!set;i++){var d=(day+i)%7,r=HOURS[d];if(!r)continue;
+        if(i===0&&mins<r[0]){msg="Opens today "+fmt(r[0]);set=true;}
+        else if(i===1){msg="Opens tomorrow";set=true;}
+        else if(i>1){msg="Opens "+days[d];set=true;}}
+      nsub.textContent=msg;txt.textContent=set?msg:"Closed";
+    }
+    document.querySelectorAll(".hrow").forEach(function(row){row.classList.toggle("today",Number(row.getAttribute("data-day"))===day);});
+  }
+  update();setInterval(update,60000);
+
+  var burger=document.getElementById("burger"),nav=document.getElementById("nav");
+  burger.addEventListener("click",function(){var o=nav.classList.toggle("show");burger.setAttribute("aria-expanded",o?"true":"false");});
+  nav.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){nav.classList.remove("show");burger.setAttribute("aria-expanded","false");});});
+
+  var catnav=document.getElementById("catnav");
+  var links={};
+  document.querySelectorAll(".catnav a").forEach(function(a){links[a.getAttribute("href").slice(1)]=a;});
+  var currentCat=null;
+  var catObs=new IntersectionObserver(function(es){es.forEach(function(e){
+    if(e.isIntersecting && currentCat!==e.target.id){
+      currentCat=e.target.id;
+      document.querySelectorAll(".catnav a").forEach(function(a){a.classList.remove("active");});
+      var l=links[e.target.id];
+      if(l){
+        l.classList.add("active");
+        // scroll ONLY the category bar horizontally — never the page
+        var lRect=l.getBoundingClientRect(), nRect=catnav.getBoundingClientRect();
+        catnav.scrollLeft += (lRect.left - nRect.left) - (catnav.clientWidth/2) + (lRect.width/2);
+      }
+    }
+  });},{rootMargin:"-45% 0px -50% 0px"});
+  document.querySelectorAll(".cat").forEach(function(c){catObs.observe(c);});
+
+  document.querySelectorAll(".tile img").forEach(function(img){
+    img.addEventListener("error",function(){var d=document.createElement("div");d.className="ph";d.textContent=img.getAttribute("data-emoji")||"🍽️";img.replaceWith(d);});
+  });
+
+  var lb=document.getElementById("lightbox"),lbImg=document.getElementById("lbImg");
+  document.querySelectorAll(".tile").forEach(function(fig){fig.addEventListener("click",function(){
+    var img=fig.querySelector("img");if(!img||!img.getAttribute("src"))return;lbImg.src=img.src;lbImg.alt=img.alt||"";lb.classList.add("show");});});
+  lb.addEventListener("click",function(){lb.classList.remove("show");lbImg.src="";});
+  document.addEventListener("keydown",function(e){if(e.key==="Escape"){lb.classList.remove("show");lbImg.src="";}});
+
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}});},{threshold:.12});
+  document.querySelectorAll(".reveal").forEach(function(el){io.observe(el);});
+
+  document.getElementById("yr").textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
